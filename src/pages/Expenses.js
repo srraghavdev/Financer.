@@ -90,7 +90,7 @@ function Expenses() {
   };
 
   async function addTransaction(transaction, many) {
-    setisLoading(true)
+    setisLoading(true);
     try {
       const docRef = await addDoc(
         collection(db, `users/${user.uid}/transactions`),
@@ -107,7 +107,7 @@ function Expenses() {
         toast.success("Expense Added!");
       }
       console.log("finished adding");
-      setisLoading(false)
+      setisLoading(false);
     } catch (e) {
       console.log("Error adding document: ", e);
       if (!many) {
@@ -157,12 +157,12 @@ function Expenses() {
     await editdoc(newTransaction, uid);
   }
   async function editdoc(transaction, uid) {
-    setisLoading(true)
+    setisLoading(true);
     try {
       if (user) {
         const collectionRef = collection(db, `users/${user.uid}/transactions`);
         const querySnapshot = await getDocs(collectionRef);
-        querySnapshot.forEach(async (document) => {
+        for (const document of querySnapshot.docs) {
           let x = document.data();
           if (x.uuid == uid) {
             const docRef = doc(
@@ -172,11 +172,11 @@ function Expenses() {
             );
             await setDoc(docRef, transaction);
           }
-        });
+        }
         toast.success("Edited transaction successfully!");
         await fetchTransactions(true);
         console.log("finished editing");
-        setisLoading(false)
+        setisLoading(false);
       }
     } catch (e) {
       console.log("Error editing document: ", e);
@@ -185,12 +185,12 @@ function Expenses() {
   }
 
   async function deletetrans(uid) {
-    setisLoading(true)
+    setisLoading(true);
     try {
       if (user) {
         const collectionRef = collection(db, `users/${user.uid}/transactions`);
         const querySnapshot = await getDocs(collectionRef);
-        querySnapshot.forEach(async (document) => {
+        for (const document of querySnapshot.docs) {
           let x = document.data();
           if (x.uuid == uid) {
             const docRef = doc(
@@ -200,33 +200,35 @@ function Expenses() {
             );
             await deleteDoc(docRef);
           }
-        });
+        }
         toast.success("Transaction deleted successfully!");
         await fetchTransactions(true);
         console.log("finished deleting");
-        setisLoading(false)
+        setisLoading(false);
       }
     } catch (e) {
       console.log("Error editing document: ", e);
       toast.error("Couldn't delete transaction");
     }
   }
-  async function deleteallexpense(){
-    setisLoading(true)
+  async function deleteallexpense() {
+    setisLoading(true);
     try {
       if (user) {
         const collectionRef = collection(db, `users/${user.uid}/transactions`);
         const querySnapshot = await getDocs(collectionRef);
-        querySnapshot.forEach(async (document) => {
-          let x= document.data()
-          if(x.type=='expense'){
-             await deleteDoc(doc(db, `users/${user.uid}/transactions`, document.id));
+        for (const document of querySnapshot.docs) {
+          let x = document.data();
+          if (x.type == "expense") {
+            await deleteDoc(
+              doc(db, `users/${user.uid}/transactions`, document.id)
+            );
           }
-        });
+        }
         toast.success("Deleted all expenses successfully!");
         await fetchTransactions(true);
         console.log("finished deleting");
-        setisLoading(false)
+        setisLoading(false);
       }
     } catch (e) {
       console.log("Error deleting expenses: ", e);
@@ -240,6 +242,7 @@ function Expenses() {
       ) : (
         <>
           <Header></Header>
+          <h1 style={{textAlign:'center',paddingTop:'1rem'}} className="heading-eachpage">Expense</h1>
           <Cards
             showExpenseModal={showExpenseModal}
             expense={expense}
@@ -247,7 +250,8 @@ function Expenses() {
             balance={balance}
             deleteallexpense={deleteallexpense}
           ></Cards>
-          {transactions.filter(element=>element.type=='expense').length != 0 ? (
+          {transactions.filter((element) => element.type == "expense").length !=
+          0 ? (
             <Chartsexpense sortedarray={finalarray}></Chartsexpense>
           ) : (
             <NoTransactions></NoTransactions>

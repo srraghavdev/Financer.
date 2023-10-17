@@ -159,7 +159,7 @@ function Income() {
       if (user) {
         const collectionRef = collection(db, `users/${user.uid}/transactions`);
         const querySnapshot = await getDocs(collectionRef);
-        querySnapshot.forEach(async (document) => {
+        for(const document of querySnapshot.docs){
           let x = document.data();
           if (x.uuid == uid) {
             const docRef = doc(
@@ -169,7 +169,7 @@ function Income() {
             );
             await setDoc(docRef, transaction);
           }
-        });
+        }
         toast.success("Edited transaction successfully!");
         await fetchTransactions(true);
         console.log('first')
@@ -188,7 +188,7 @@ function Income() {
       if (user) {
         const collectionRef = collection(db, `users/${user.uid}/transactions`);
         const querySnapshot = await getDocs(collectionRef);
-        querySnapshot.forEach(async (document) => {
+        for(const document of querySnapshot.docs){
           let x = document.data();
           if (x.uuid == uid) {
             const docRef = doc(
@@ -198,7 +198,7 @@ function Income() {
             );
             await deleteDoc(docRef);
           }
-        });
+        }
         toast.success("Transaction deleted successfully!");
         await fetchTransactions(true);
         console.log('first')
@@ -216,12 +216,14 @@ function Income() {
       if (user) {
         const collectionRef = collection(db, `users/${user.uid}/transactions`);
         const querySnapshot = await getDocs(collectionRef);
-        querySnapshot.forEach(async (document) => {
-          let x= document.data()
-          if(x.type=='income'){
-             await deleteDoc(doc(db, `users/${user.uid}/transactions`, document.id));
+        for (const document of querySnapshot.docs) {
+          let x = document.data();
+          if (x.type == "income") {
+            await deleteDoc(
+              doc(db, `users/${user.uid}/transactions`, document.id)
+            );
           }
-        });
+        }
         toast.success("Deleted all incomes successfully!");
         await fetchTransactions(true);
         console.log("finished deleting");
@@ -239,6 +241,7 @@ function Income() {
       ) : (
         <>
           <Header></Header>
+          <h1 style={{textAlign:'center',paddingTop:'1rem'}} className="heading-eachpage">Income</h1>
           <Cards
             showIncomeModal={showIncomeModal}
             income={income}

@@ -71,7 +71,7 @@ function Chartsexpense({ sortedarray }) {
         }}
         className="linechart"
       >
-        <h2 style={{ paddingBottom: "2rem" }}>Your Income</h2>
+        <h2 style={{ paddingBottom: "2rem" }}>Your Expneses</h2>
         <Line
           {...config}
           onReady={(chartInstance) => (chart = chartInstance)}
@@ -91,7 +91,7 @@ function Chartsexpense({ sortedarray }) {
         }}
         className='piechart'
       >
-        <h2 style={{ paddingBottom: "2rem" }}>Total Income</h2>
+        <h2 style={{ paddingBottom: "2rem" }}>Total Expenses</h2>
         {temparr.length == 0 ? (
           <p style={{color:'var(--black)'}}>Seems like you haven't spent anything till now...</p>
         ) : (

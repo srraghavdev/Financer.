@@ -476,6 +476,10 @@ th{
   background-color: var(--black) !important;
   color:var(--theme) !important;
 }
+.heading-eachpage{
+  font-size: 2rem !important;
+  color:var(--black);
+}
 @media screen and (min-width:320px) and (max-width:768px) {
   *{
     font-size: 93%;

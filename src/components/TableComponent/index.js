@@ -145,7 +145,7 @@ function TableComponent({
             await addTransaction(newTransaction, true);
           }
           console.log("from improtcsv");
-          await fetchTransactions();
+          await fetchTransactions(true);
           // re fetching updated transacitons after each addition of transaction, awating since fetchtransactions
         },
       });

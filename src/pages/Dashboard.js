@@ -95,7 +95,7 @@ function Dashboard() {
   };
 
   async function addTransaction(transaction, many) {
-    setisLoading(true)
+    setisLoading(true);
     try {
       const docRef = await addDoc(
         collection(db, `users/${user.uid}/transactions`),
@@ -108,7 +108,7 @@ function Dashboard() {
       temparr = JSON.parse(JSON.stringify(transactions));
       temparr.push(transaction);
       setTransactions(temparr);
-      setisLoading(false)
+      setisLoading(false);
       if (!many) {
         toast.success("Transaction Added!");
       }
@@ -162,12 +162,12 @@ function Dashboard() {
     await editdoc(newTransaction, uid);
   }
   async function editdoc(transaction, uid) {
-    setisLoading(true)
+    setisLoading(true);
     try {
       if (user) {
         const collectionRef = collection(db, `users/${user.uid}/transactions`);
         const querySnapshot = await getDocs(collectionRef);
-        querySnapshot.forEach(async (document) => {
+        for(const document of querySnapshot.docs){
           let x = document.data();
           if (x.uuid == uid) {
             const docRef = doc(
@@ -177,11 +177,11 @@ function Dashboard() {
             );
             await setDoc(docRef, transaction);
           }
-        });
+        }
         toast.success("Edited transaction successfully!");
         await fetchTransactions(true);
         console.log("finished editing");
-        setisLoading(false)
+        setisLoading(false);
       }
     } catch (e) {
       console.log("Error editing document: ", e);
@@ -190,12 +190,12 @@ function Dashboard() {
   }
 
   async function deletetrans(uid) {
-    setisLoading(true)
+    setisLoading(true);
     try {
       if (user) {
         const collectionRef = collection(db, `users/${user.uid}/transactions`);
         const querySnapshot = await getDocs(collectionRef);
-        querySnapshot.forEach(async (document) => {
+        for(const document of querySnapshot.docs){
           let x = document.data();
           if (x.uuid == uid) {
             const docRef = doc(
@@ -205,11 +205,11 @@ function Dashboard() {
             );
             await deleteDoc(docRef);
           }
-        });
+        }
         toast.success("Transaction deleted successfully!");
         await fetchTransactions(true);
         console.log("finished deleting");
-        setisLoading(false)
+        setisLoading(false);
       }
     } catch (e) {
       console.log("Error editing document: ", e);
@@ -217,19 +217,21 @@ function Dashboard() {
     }
   }
 
-  async function deletealltrans(){
-    setisLoading(true)
+  async function deletealltrans() {
+    setisLoading(true);
     try {
       if (user) {
         const collectionRef = collection(db, `users/${user.uid}/transactions`);
         const querySnapshot = await getDocs(collectionRef);
-        querySnapshot.forEach(async (document) => {
-          await deleteDoc(doc(db, `users/${user.uid}/transactions`, document.id));
-        });
+        for(const document of querySnapshot.docs){
+          await deleteDoc(
+            doc(db, `users/${user.uid}/transactions`, document.id)
+          );
+        }
         toast.success("Deleted all transactions successfully!");
         await fetchTransactions(true);
         console.log("finished deleting");
-        setisLoading(false)
+        setisLoading(false);
       }
     } catch (e) {
       console.log("Error deleting transactions: ", e);
@@ -243,6 +245,7 @@ function Dashboard() {
       ) : (
         <>
           <Header></Header>
+          <h1 style={{textAlign:'center',paddingTop:'1rem'}} className="heading-eachpage">Dashboard</h1>
           <Cards
             showExpenseModal={showExpenseModal}
             showIncomeModal={showIncomeModal}

@@ -33,8 +33,8 @@ function Editmodal({
       <Form
         form={form}
         layout="vertical"
-        onFinish={(values) => {
-          onFinish(values, datatobedited.type, datatobedited.uuid);
+        onFinish={async(values) => {
+          await onFinish(values, datatobedited.type, datatobedited.uuid);
         }}
       >
         <Form.Item
