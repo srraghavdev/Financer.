@@ -148,7 +148,7 @@ html {
 :where(.css-1vr7spz).ant-pagination
   .ant-pagination-item-active {
   font-weight: 600 !important;
-  background-color: #ffffff !important;
+  /* background-color: #ffffff !important; */
   border-color: var(--theme) !important;
 }
 :where(.css-1vr7spz).ant-pagination
