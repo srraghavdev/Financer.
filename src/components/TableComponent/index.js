@@ -55,7 +55,7 @@ function TableComponent({
       responsive : ['md']
     },
     {
-      title: "Action",
+      title: "Edit or Delete",
       dataIndex: "",
       key: "action",
       render: (x) => (

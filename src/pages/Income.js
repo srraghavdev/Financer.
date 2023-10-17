@@ -25,6 +25,7 @@ import Editmodal from "../components/Editmodal";
 import { setDoc } from "firebase/firestore";
 import Footer from "../components/Footer";
 import Loader from "../components/Loader";
+import { Modal } from "antd";
 function Income() {
   const [user] = useAuthState(auth);
   const [isIncomeModalVisible, setIsIncomeModalVisible] = useState(false);
@@ -175,6 +176,7 @@ function Income() {
         console.log('first')
         console.log("finished editing");
         setisLoading(false)
+        handleEditCancel()
       }
     } catch (e) {
       console.log("Error editing document: ", e);

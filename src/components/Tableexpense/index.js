@@ -46,7 +46,7 @@ function Tableexpense({
       key: "mop",
     },
     {
-      title: "Action",
+      title: "Edit or Delete",
       dataIndex: "",
       key: "action",
       render: (x) => (

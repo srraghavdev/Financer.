@@ -25,7 +25,7 @@ function Home() {
             </span>
           </h1>
           <p style={{textAlign:'center'}}>
-            Financer<span style={{ color: "var(--theme)" }}>.</span>allows you
+            Financer<span style={{ color: "var(--theme)" }}>. </span>allows you
             to track your expenses and various income sources with complete CRUD
             capabilities.View your sift through your data in different charts to
             gather insight.

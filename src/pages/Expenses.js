@@ -177,6 +177,7 @@ function Expenses() {
         await fetchTransactions(true);
         console.log("finished editing");
         setisLoading(false);
+        handleEditCancel()
       }
     } catch (e) {
       console.log("Error editing document: ", e);

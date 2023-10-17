@@ -47,7 +47,7 @@ function Tableincome({
       key: "mop",
     },
     {
-      title: "Action",
+      title: "Edit or Delete",
       dataIndex: "",
       key: "action",
       render: (x) => (
