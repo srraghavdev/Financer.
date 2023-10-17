@@ -283,7 +283,7 @@ h2 {
   > td:not(:last-child):not(.ant-table-selection-column):not(
     .ant-table-row-expand-icon-cell
   ):not([colspan])::before {
-  background-color: var(--theme);
+  background-color: var(--theme)!important;
 }
 :where(.css-1vr7spz).ant-table-wrapper
   .ant-table-tbody
@@ -297,24 +297,24 @@ h2 {
 }
 :where(.css-1vr7spz).ant-pagination
   .ant-pagination-item-active {
-  font-weight: 600;
-  background-color: var(--white);
-  border-color: var(--theme);
+  font-weight: 600!important;
+  background-color: var(--white)!important;
+  border-color: var(--theme)!important;
 }
 .anticon svg {
-  display: inline-block;
-  color: var(--theme);
+  display: inline-block!important;
+  color: var(--theme)!important;
 }
 :where(.css-1vr7spz).ant-pagination
   .ant-pagination-item
   a {
-  display: block;
-  padding: 0 6px;
-  color: var(--theme);
+  display: block!important;
+  padding: 0 6px!important;
+  color: var(--theme)!important;
 }
 :where(.css-1vr7spz).ant-empty-normal
   .ant-empty-description {
-  color: var(--theme);
+  color: var(--theme)!important;
 }
 :where(.css-1vr7spz).ant-table-wrapper
   .ant-table-tbody
@@ -327,36 +327,36 @@ h2 {
 :where(.css-1vr7spz).ant-table-wrapper
   .ant-table-tbody
   > tr.ant-table-placeholder {
-  background: var(--white);
+  background: var(--white)!important;
 }
 
 :where(.css-1vr7spz).ant-modal .ant-modal-content {
-  color: var(--black);
-  background: var(--white);
+  color: var(--black)!important;
+  background: var(--white)!important;
 }
 :where(.css-1vr7spz).ant-form-item
   .ant-form-item-label
   > label {
-  color: var(--black);
+  color: var(--black)!important;
 }
 .custom-input {
-  background: var(--white);
-  border: 1px solid var(--theme);
+  background: var(--white)!important;
+  border: 1px solid var(--theme)!important;
 }
 :where(.css-1vr7spz).ant-modal .ant-modal-title {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--white)!important;
+  color: var(--black)!important;
 }
 
 :where(
     .css-1vr7spz
   ).ant-select.ant-select-in-form-item {
   width: 100%;
-  border-bottom: 1px solid var(--theme);
+  border-bottom: 1px solid var(--theme)!important;
 }
 :where(.css-1vr7spz).ant-btn-default {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--white)!important;
+  color: var(--black)!important;
 }
 :where(.css-1vr7spz)[class^="ant-modal"]
   [class^="ant-modal"],
@@ -366,15 +366,15 @@ h2 {
   [class*=" ant-modal"],
 :where(.css-1vr7spz)[class*=" ant-modal"]
   [class*=" ant-modal"] {
-  color: var(--black);
+  color: var(--black) !important;
 }
 .custom-input {
-  color: var(--black);
+  color: var(--black) !important;
 }
 :where(.css-1vr7spz).ant-picker
   .ant-picker-input
   > input {
-  color: var(--black);
+  color: var(--black) !important;
 }
 :where(.css-1vr7spz).ant-picker:not(
     .ant-picker-disabled
@@ -382,7 +382,7 @@ h2 {
 :where(.css-1vr7spz).ant-picker:not(
     .ant-picker-disabled
   ).ant-picker-status-error:not([disabled]):hover {
-  background-color: var(--white);
+  background-color: var(--white) !important;
 }
 .label-input {
   color: var(--black);
@@ -401,7 +401,7 @@ span {
   font-family: "Montserrat";
 }
 :where(.css-1vr7spz).ant-table-wrapper .ant-table {
-  font-family: "Montserrat";
+  font-family: "Montserrat" !important;
 }
 .left {
   color: var(--black);
