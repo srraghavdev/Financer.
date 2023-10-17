@@ -10,11 +10,11 @@
   ).ant-radio-button-wrapper-checked:not(
     .ant-radio-button-wrapper-disabled
   ):active {
-  color: var(--black) !important;
+  color: var(--black);
   background-color: var(--white) !important;
 }
 :where(.css-1vr7spz).ant-radio-group {
-  background-color: var(--theme) !important;
+  background-color: var(--theme);
 }
 
 :where(.css-1vr7spz)[class^="ant-radio"]
@@ -25,41 +25,39 @@
   [class*=" ant-radio"],
 :where(.css-1vr7spz)[class*=" ant-radio"]
   [class*=" ant-radio"] {
-  box-sizing: border-box !important;
+  box-sizing: border-box;
 }
-:where(.css-1vr7spz).ant-radio-button-wrapper >.ant-radio-button {
-  background-color: var(--white) !important;
-}
+
 :where(
     .css-1vr7spz
   ).ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
-  color: var(--black) !important;
-  background: var(--white) !important;
-  border-color: var(--theme) !important;
+  color: var(--black);
+  background: var(--white);
+  border-color: var(--theme);
 }
 :where(.css-1vr7spz).ant-radio-button-wrapper:hover {
-  position: relative !important;
-  color: var(--theme)!important;
+  position: relative;
+  color: var(--theme);
 }
 .ant-radio-button-wrapper
   ant-radio-button-wrapper-checked
   css-1vr7spz {
-  background-color: var(--white) !important;
+  background-color: var(--white);
 }
 :where(
     .css-1vr7spz
   ).ant-radio-button-wrapper-checked:not(
     .ant-radio-button-wrapper-disabled
   ):hover {
-  color: var(--black) !important;
-  border-color: var(--theme) !important;
+  color: var(--black);
+  border-color: var(--theme);
 }
 :where(
     .css-1vr7spz
   ).ant-radio-button-wrapper-checked:not(
     .ant-radio-button-wrapper-disabled
   ):hover {
-  border-color: var(--theme) !important;
+  border-color: var(--theme);
 }
 :where(.css-1vr7spz)[class^="ant-radio"]
   [class^="ant-radio"],
@@ -69,56 +67,56 @@
   [class*=" ant-radio"],
 :where(.css-1vr7spz)[class*=" ant-radio"]
   [class*=" ant-radio"] {
-  background-color: var(--white) !important;
-  color: var(--black) !important;
+  background-color: var(--white);
+  color: var(--black);
 }
 html {
   height: 100vh;
-  background-color: var(--white) !important;
+  background-color: var(--white);
 }
 :where(
     .css-1vr7spz
   ).ant-radio-button-wrapper-checked:not(
     .ant-radio-button-wrapper-disabled
   ):hover {
-  border-color: var(--theme) !important;
+  border-color: var(--theme);
 }
 :where(
     .css-1vr7spz
   ).ant-radio-button-wrapper-checked:not(
     .ant-radio-button-wrapper-disabled
   )::before {
-  background-color: var(--theme) !important;
+  background-color: var(--theme);
 }
 :where(
     .css-1vr7spz
   ).ant-radio-button-wrapper:last-child {
-  border-start-end-radius: 0 !important;
-  border-end-end-radius: 0 !important;
+  border-start-end-radius: 0;
+  border-end-end-radius: 0;
 }
 :where(
     .css-1vr7spz
   ).ant-radio-button-wrapper:first-child {
-  border-inline-start: 1px solid #d9d9d9 !important;
-  border-start-start-radius: 0px !important;
-  border-end-start-radius: 0px !important;
+  border-inline-start: 1px solid #d9d9d9;
+  border-start-start-radius: 0px;
+  border-end-start-radius: 0px;
 }
 :where(.css-1vr7spz).ant-select:not(
     .ant-select-customize-input
   )
   .ant-select-selector {
-  background-color: var(--white) !important;
+  background-color: var(--white);
 }
 :where(
     .css-1vr7spz
   ).ant-radio-button-wrapper-checked:not(
     .ant-radio-button-wrapper-disabled
   ):first-child {
-  border-color: var(--theme) !important;
+  border-color: var(--theme);
 }
 .my-table {
   margin-bottom: 0rem !important;
-  border: 1.5px solid var(--theme) !important;
+  border: 1.5px solid var(--theme);
 }
 :where(.css-1vr7spz).ant-table-wrapper
   .ant-table-tbody
@@ -128,16 +126,16 @@ html {
   .ant-table-tbody
   > tr
   > td {
-  background-color: var(--white) !important;
+  background-color: var(--white);
 }
 .my-card {
-  border: 1.5px solid var(--theme) ;
+  border: 1.5px solid var(--theme);
 }
 .input-flex {
   border: 1.5px solid var(--theme);
 }
 :where(.css-1vr7spz).ant-table-wrapper table {
-  border: 1.5px solid var(--theme) !important;
+  border: 1.5px solid var(--theme);
 }
 .signup-wrapper {
   border: 1.5px solid var(--theme);
@@ -147,14 +145,14 @@ html {
 }
 :where(.css-1vr7spz).ant-pagination
   .ant-pagination-item-active {
-  font-weight: 600 !important;
-  background-color: #ffffff !important;
-  border-color: var(--theme) !important;
+  font-weight: 600;
+  background-color: #ffffff;
+  border-color: var(--theme);
 }
 :where(.css-1vr7spz).ant-pagination
   .ant-pagination-item-active
   a {
-  color: var(--theme) !important;
+  color: var(--theme);
 }
 .home-container {
   display: flex;
@@ -216,8 +214,8 @@ h2 {
     .ant-select-customize-input
   )
   .ant-select-selector {
-  background-color: var(--white)!important;
-  color: var(--black)!important;
+  background-color: var(--white);
+  color: var(--black);
 }
 :where(.css-1vr7spz).ant-table-wrapper
   .ant-table-tbody
@@ -227,15 +225,15 @@ h2 {
   .ant-table-tbody
   > tr
   > td {
-  background-color: var(--white)!important;
-  color: var(--black)!important;
+  background-color: var(--white);
+  color: var(--black);
 }
 
 :where(.css-1vr7spz).ant-table-wrapper
   .ant-table-tbody
   .ant-table-row
   .ant-table-cell-row-hover {
-  background-color: var(--white)!important;
+  background-color: var(--white);
 }
 :where(.css-1vr7spz).ant-table-wrapper
   .ant-table-thead
@@ -245,8 +243,8 @@ h2 {
   .ant-table-thead
   > tr
   > td {
-  color: var(--black)!important;
-  background-color: var(--white)!important;
+  color: var(--black);
+  background-color: var(--white);
 }
 :where(.css-1vr7spz).ant-table-wrapper
   .ant-table-tbody
@@ -256,9 +254,9 @@ h2 {
   .ant-table-tbody
   > tr
   > td {
-  background-color: var(--white)!important;
-  color: var(--black)!important;
-  border-right: 1px solid var(--theme)!important;
+  background-color: var(--white);
+  color: var(--black);
+  border-right: 1px solid var(--theme);
   border-top: 1px solid var(--theme) !important;
 }
 :where(.css-1vr7spz).ant-table-wrapper
@@ -269,7 +267,7 @@ h2 {
   .ant-table-thead
   > tr
   > td {
-  border-bottom: none !important;
+  border-bottom: none;
 }
 :where(.css-1vr7spz).ant-table-wrapper
   .ant-table-thead
