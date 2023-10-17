@@ -38,7 +38,7 @@ a{
 .navbardesk{
     align-items: center !important;
 }
-:where(.css-dev-only-do-not-override-1vr7spz).ant-drawer .ant-drawer-content {
+:where(.css-1vr7spz).ant-drawer .ant-drawer-content {
     background: var(--white);
     color:var(--black);
 }
@@ -49,7 +49,7 @@ a{
 .ant-drawer-body button{
     margin-bottom: 1rem;
 }
-:where(.css-dev-only-do-not-override-1vr7spz).ant-btn-default {
+:where(.css-1vr7spz).ant-btn-default {
     background-color: transparent;
     border: none;
 }
